@@ -1,14 +1,8 @@
 <?php
-$allowedExts = array("txt", "gif", "jpeg", "jpg", "png");
+$allowedExts = array("txt");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
-if ((($_FILES["file"]["type"] == "text/plain")
-|| ($_FILES["file"]["type"] == "image/gif")
-|| ($_FILES["file"]["type"] == "image/jpeg")
-|| ($_FILES["file"]["type"] == "image/jpg")
-|| ($_FILES["file"]["type"] == "image/pjpeg")
-|| ($_FILES["file"]["type"] == "image/x-png")
-|| ($_FILES["file"]["type"] == "image/png"))
+if (($_FILES["file"]["type"] == "text/plain")
 && ($_FILES["file"]["size"] < 20000)
 && in_array($extension, $allowedExts))
   {
