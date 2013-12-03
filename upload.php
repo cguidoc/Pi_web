@@ -3,7 +3,6 @@ $allowedExts = array("txt");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 if (($_FILES["file"]["type"] == "text/plain")
-&& ($_FILES["file"]["size"] < 20000)
 && in_array($extension, $allowedExts))
   {
   if ($_FILES["file"]["error"] > 0)
