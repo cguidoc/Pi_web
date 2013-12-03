@@ -2,7 +2,7 @@
 $allowedExts = array("txt", "gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
-if ((($_FILES["file"]["type"] == "text/txt")
+if ((($_FILES["file"]["type"] == "text/plain")
 || ($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "image/jpeg")
 || ($_FILES["file"]["type"] == "image/jpg")
