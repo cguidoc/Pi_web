@@ -52,7 +52,7 @@ fwrite($config_f, $savestring);
 
 if ($handshake == "XON/XOFF"){
 	$savestring = "xonxoff = True" . PHP_EOL;
-	fwrite($config_f, $savestring);
+	fwrite($config_f, $savestring);}
 
 $savestring = "[machine]" . PHP_EOL;
 fwrite($config_f, $savestring);
