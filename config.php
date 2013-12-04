@@ -26,7 +26,7 @@ elseif ($parity == "none"){
 	$parity = "N";}
 
 //---save data to config file---
-$config_f = fopen(”config.txt”, “w+”);
+$config_f = fopen("config.txt", "w+");
 
 $savestring = "[serial]" . PHP_EOL;
 fwrite($config_f, $savestring);
