@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>East Branch Machine Bridge</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+</head>
+<body>
+
+<h1>East Branch Engineering - Machine Configuration</h1>
+
+
+<form id="config_update" action="config.php" method="POST" enctype="multipart/form-data">
+	Machine Name: <input type="text" name="machine" /></br>
+	Serial Parameters - Baud rate: <select name="baudrate">
+		<option>300</option>
+		<option>1200</option>
+		<option>2400</option>
+		<option>4800</option>
+		<option>9600</option>
+		<option>14400</option>
+		<option>19200</option>
+		<option>28800</option>
+		<option>38400</option>
+		<option>57600</option>
+		<option>115200</option>
+		<option>230400</option>
+	</select></br>
+	Serial Parameters - Byte size: <select name="bytesize">
+		<option>7</option>
+		<option>8</option>
+	</select></br>
+	Serial Parameters - Parity: <select name="parity">
+		<option>even</option>
+		<option>odd</option>
+		<option>none</option>
+	</select></br>
+	Serial Parameters - Stop bits: <select name="stopbits">
+		<option>1</option>
+		<option>1.5</option>
+		<option>2</option>
+	</select></br>
+	Serial Parameters - Handshake: <select name="handshake">
+		<option>XON/XOFF</option>
+		<option>RTS/CDS</option>
+		<option>DTR/DTS</option>
+	</select></br>
+
+	<input type="submit" value="Save" />
+</form>	
+
+</body>
+</html>
