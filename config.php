@@ -7,23 +7,23 @@ $parity = $_POST['parity']; 		//rs232 parity
 $stopbits = $_POST['stopbits']; 	//rs232 stopbits
 $handshake = $_POST['handshake']; 	//rs232 handshake
 
-echo $m_name . "</br>"
-echo $baudrate . "</br>"
-echo $bytesize . "</br>"
-echo $parity . "</br>"
-echo $stopbits . "</br>"
-echo $handshake . "</br>"
+echo $m_name . "</br>";
+echo $baudrate . "</br>";
+echo $bytesize . "</br>";
+echo $parity . "</br>";
+echo $stopbits . "</br>";
+echo $handshake . "</br>";
 
 
 //---validate form data---
 if ($parity == "even"){
-	$parity = "E"}
+	$parity = "E";}
 
 elseif ($parity == "odd"){
-	$parity = "O"}
+	$parity = "O";}
 
 elseif ($parity == "none"){
-	$parity = "N"}
+	$parity = "N";}
 
 //---save data to config file---
 $config_f = fopen(”config.txt”, “w+”);
