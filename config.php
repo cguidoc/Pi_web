@@ -25,6 +25,7 @@ elseif ($parity == "odd"){
 elseif ($parity == "none"){
 	$parity = "N";}
 
+
 //---save data to config file---
 $config_f = fopen("config.txt", "w+");
 
@@ -48,6 +49,10 @@ fwrite($config_f, $savestring);
 
 $savestring = "handshake = " . $handshake . PHP_EOL;
 fwrite($config_f, $savestring);
+
+if ($handshake == "XON/XOFF"){
+	$savestring = "xonxoff = True" . PHP_EOL;
+	fwrite($config_f, $savestring);
 
 $savestring = "[machine]" . PHP_EOL;
 fwrite($config_f, $savestring);
