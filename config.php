@@ -52,7 +52,7 @@ fwrite($config_f, $savestring);
 $savestring = "[machine]" . PHP_EOL;
 fwrite($config_f, $savestring);
 
-$savestring = "machine_name" . $m_name . PHP_EOL;
+$savestring = "machine_name = " . $m_name . PHP_EOL;
 fwrite($config_f, $savestring);
 
 
