@@ -57,5 +57,4 @@ fwrite($config_f, $savestring);
 
 
 fclose($config_f);
-echo “<h1>You data has been saved in a text file!</h1>”;
 ?>
