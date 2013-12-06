@@ -16,7 +16,8 @@
 	<table class="table table-condensed table-hover">
 	<?php
 
-		$file = @fopen("/upload/machine_log.txt", "r") ;  
+		$file = @fopen("/upload/machine_log.txt", "r") ; 
+		echo "file opened" 
 
 		// while there is another line to read in the file
 		while (!feof($file)){
@@ -30,7 +31,7 @@
 
 				echo "test"
 			} 
-			echo "end of file reached"  
+		echo "end of file reached"  
 		fclose($file) ;
 
 	?>
