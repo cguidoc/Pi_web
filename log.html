@@ -22,16 +22,16 @@
 		while (!feof($file))
 			{
 				// Get the current line that the file is reading
-				$currentLine = fgets($file) ;
+				$currentLine = fgets($file);
 				if (strapos($currentLine, 'ERROR') !== false){
-					$status = 'danger';}				}
+					$status = 'danger';}
 
 				if (strapos($currentLine, 'NOTICE') !== false){
 					$status = 'success';}
 
 				echo "<tr 'class=' $status >";
 				echo "<td> $currentLine </td>";
-				echo "</tr>";
+				echo "</tr>" ;
 			}   
 		fclose($file) ;
 
