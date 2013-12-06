@@ -29,8 +29,8 @@
 				if (strapos($currentLine, 'NOTICE') !== false){
 					$status = 'success';}
 
-				echo "<tr class=" . $status . ">";
-				echo "<td>" . $currentLine . "</td>";
+				echo "<tr 'class=' $status >";
+				echo "<td> $currentLine </td>";
 				echo "</tr>";
 			}   
 		fclose($file) ;
