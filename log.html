@@ -19,8 +19,7 @@
 		$file = @fopen('upload/machine_log.txt', "r") ;  
 
 		// while there is another line to read in the file
-		while (!feof($file))
-			{
+		while (!feof($file)){
 				// Get the current line that the file is reading
 				$currentLine = fgets($file);
 				if (strapos($currentLine, 'ERROR') !== false){
@@ -29,9 +28,11 @@
 				if (strapos($currentLine, 'NOTICE') !== false){
 					$status = 'success';}
 
-				echo "<tr 'class=' $status >";
-				echo "<td> $currentLine </td>";
-				echo "</tr>" ;
+				echo "<tr ";
+				echo "<td>";
+				echo $currentLine ;
+				echo "</td>";
+				echo "</tr>";
 			}   
 		fclose($file) ;
 
