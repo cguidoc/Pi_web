@@ -13,31 +13,30 @@
 		<button type="button" class="btn btn-default"><a href="config.html">update serial parameters</a></button>
 	</div>
 	</br>
-	<table class="table table-condensed table-hover">
+	
 	<?php
-
 		$file = @fopen("/upload/machine_log.txt", "r") ; 
 		echo "file opened" 
 
-		// while there is another line to read in the file
 		while (!feof($file)){
-				// Get the current line that the file is reading
-				$currentLine = fgets($file);
-				if (strapos($currentLine, 'ERROR') !== false){
-					$status = 'danger';}
+				
+			$currentLine = fgets($file);
+			if (strapos($currentLine, 'ERROR') !== false){
+				$status = 'danger';}
 
-				if (strapos($currentLine, 'NOTICE') !== false){
-					$status = 'success';}
+			if (strapos($currentLine, 'NOTICE') !== false){
+				$status = 'success';}
 
-				echo "test"
-			} 
+			echo "test"
+		} 
 		echo "end of file reached"  
 		fclose($file) ;
 
 	?>
+	<table class="table table-condensed table-hover">
 	</table>
 		
-
+back in the html
 </body>
 </html>
 
