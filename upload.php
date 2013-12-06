@@ -23,7 +23,7 @@ if (($_FILES["file"]["type"] == "text/plain")
    // else
      // {
       move_uploaded_file($_FILES["file"]["tmp_name"], "upload/to_machine.txt");
-      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      echo "Stored in: upload/to_machine.txt";
     //  }
     }
   }
