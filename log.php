@@ -14,7 +14,7 @@
 	</div>
 	</br>
 	
-	<?php
+<?php
 		echo "inside the php"
 		$file = @fopen("/upload/machine_log.txt", "r") ; 
 		echo "file opened" 
@@ -33,7 +33,7 @@
 		echo "end of file reached"  
 		fclose($file) ;
 
-	?>
+?>
 	<table class="table table-condensed table-hover">
 	</table>
 		
