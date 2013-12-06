@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>East Branch Machine Bridge - Log</title>
+</head>
+<body>
+
+	<h1>East Branch Engineering</h1>
+	<div class="btn-group">
+		<button type="button" class="btn btn-default"><a href="log.html">Log File</a></button>
+		<button type="button" class="btn btn-default"><a href="config.html">update serial parameters</a></button>
+	</div>
+	</br>
+	<table class="table table-condensed table-hover">
+	<?php
+
+		$file = @fopen('upload/machine_log.txt', "r") ;  
+
+		// while there is another line to read in the file
+		while (!feof($file)){
+		    // Get the current line that the file is reading
+		    $currentLine = fgets($file) ;
+		    if (strapos($currentLine, 'ERROR') !== false){
+		    	$status = 'danger';} //bootstap danger class for coloring table row
+
+		    if (strapos($currentLine, 'NOTICE') !== false){
+		    	$status = 'success';} //bootstap success class for coloring table row
+
+		    echo "<tr class=" . $status . ">";
+		    echo "<td>" . $currentLine . "</td>";
+		    echo "</tr>";
+			}   
+		fclose($file) ;
+
+	?>
+	</table>
+		
+
+</body>
+</html>
+
