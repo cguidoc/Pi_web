@@ -29,14 +29,15 @@
     </div>
 
     <div class="container">
-    	<form role="form" class="form-inline" id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
-    		<div class="form-group">
-    			<label class="sr-only">Upload file to machine</label>
-				  <input type="file" name="file"/>
-				  <input type="submit" value="Upload"/>
+    	<form class="form-inline" role="form" action="upload.php">
+        <div class="form-group">
+          <label class="sr-only" for="file_name">File to Upload</label>
+          <input type="file" id="file" class="form=control">
         </div>
-		  </form>
+        <button type="submit" class="btn btn-default">Upload</button>
+      </form>
 	   </div>
-	
+
+
 </body>
 </html>

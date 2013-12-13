@@ -22,18 +22,19 @@
 		while (!feof($file)){
 				
 			$currentLine = fgets($file);
-			if (strapos($currentLine, 'ERROR') !== false){
+			if (strpos($currentLine, 'ERROR') !== false){
 				$status = 'danger';}
 
-			if (strapos($currentLine, 'NOTICE') !== false){
+			if (strpos($currentLine, 'NOTICE') !== false){
 				$status = 'success';}
 
-			echo "test"
+			echo "test line"
 		} 
 		echo "end of file reached"  
 		fclose($file) ;
 
 ?>
+
 	<table class="table table-condensed table-hover">
 	</table>
 		
