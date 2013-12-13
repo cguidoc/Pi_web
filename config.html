@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>East Branch Machine Bridge</title>
+	<meta charset="UTF-8" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<title>East Branch Machine Bridge</title>
 </head>
 <body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">East Branch Engineering</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="config.html">Config</a></li>
+            <li><a href="log.php">Log</a></li>
+            <li><a href="list.php">List Files</a></li>
+           </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
-<h1>East Branch Engineering - Machine Configuration</h1>
-
-
-<form id="config_update" action="config.php" method="POST" enctype="multipart/form-data">
-	Machine Name: <input type="text" name="machine" /></br>
-	Serial Parameters - Baud rate: <select name="baudrate">
-		<option>300</option>
-		<option>1200</option>
-		<option>2400</option>
-		<option>4800</option>
-		<option>9600</option>
-		<option>14400</option>
-		<option>19200</option>
-		<option>28800</option>
-		<option>38400</option>
-		<option>57600</option>
-		<option>115200</option>
-		<option>230400</option>
-	</select></br>
-	Serial Parameters - Byte size: <select name="bytesize">
-		<option>7</option>
-		<option>8</option>
-	</select></br>
-	Serial Parameters - Parity: <select name="parity">
-		<option>even</option>
-		<option>odd</option>
-		<option>none</option>
-	</select></br>
-	Serial Parameters - Stop bits: <select name="stopbits">
-		<option>1</option>
-		<option>1.5</option>
-		<option>2</option>
-	</select></br>
-	Serial Parameters - Handshake: <select name="handshake">
-		<option>XON/XOFF</option>
-		<option>RTS/CDS</option>
-		<option>DTR/DTS</option>
-	</select></br>
-
-	<input type="submit" value="Save" />
-</form>	
+    <div class="container">
+		<form id="config_update" action="config.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
+			<div class="form-group">
+				<label for="machine" class="col-sm-4 control-label">Machine Name</label>
+				<div class="col-sm-6">
+					<input type="text" name="machine" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="baudrate" class="col-sm-4 control-label">Serial Parameters - Baud Rate</label>
+				<div class="col-sm-6">
+					<select name="baudrate" class="form-control">
+						<option>300</option>
+						<option>1200</option>
+						<option>2400</option>
+						<option>4800</option>
+						<option>9600</option>
+						<option>14400</option>
+						<option>19200</option>
+						<option>28800</option>
+						<option>38400</option>
+						<option>57600</option>
+						<option>115200</option>
+						<option>230400</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="bytesize" class="col-sm-4 control-label">Serial Parameters - Byte Size</label>
+				<div class="col-sm-6">
+			 		<select name="bytesize" class="form-control">
+						<option>7</option>
+						<option>8</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="parity" class="col-sm-4 control-label">Serial Parameters - Parity</label>
+				<div class="col-sm-6">
+					<select name="parity" class="form-control">
+						<option>even</option>
+						<option>odd</option>
+						<option>none</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="stopbits" class="col-sm-4 control-label">Serial Parameters - Stop bits</label>
+				<div class="col-sm-6">
+					<select name="stopbits" class="form-control">
+						<option>1</option>
+						<option>1.5</option>
+						<option>2</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="handshake" class="col-sm-4 control-label">Serial Parameters - Handshake</label>
+				<div class="col-sm-6">
+					<select name="handshake" class="form-control">
+						<option>XON/XOFF</option>
+						<option>RTS/CDS</option>
+						<option>DTR/DTS</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-4 control-label">Save Settings</label>
+				<div class="col-sm-6">
+					<button type="submit" class="btn btn-default">Save</button>
+				</div>
+			</div>
+		</form>	
+	</div>
 
 </body>
 </html>
