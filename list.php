@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<link href="css/bootstrap.min.css" rel="stylesheet">
