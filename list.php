@@ -33,7 +33,7 @@
 
 <?php
 	
-foreach (glob("/upload/") as $filename) {
+foreach (glob("/var/www/Pi_web/upload/") as $filename) {
     echo "$filename size " . filesize($filename) . "\n";
 }
 ?>
