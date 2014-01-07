@@ -15,9 +15,9 @@ if (($_FILES["file"]["type"] == "text/plain") && in_array($extension, $allowedEx
     if (file_exists("upload/" . $_FILES["file"]["name"])) {
       echo $_FILES["file"]["name"] . " already exists. "; }
     else {
-      $folder = “/data/queued/”;
+      $folder = “/var/www/Pi_web/data/queued/”;
       move_uploaded_file($_FILES["file"]["tmp_name"], $folder.$_FILES["file"]["name"]);
-      echo "Stored in: upload/to_machine.txt"; }
+      echo "Stored in: " . $folder; }
   }
 }
 else {
