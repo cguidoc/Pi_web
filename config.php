@@ -15,7 +15,9 @@ echo $stopbits . "</br>";
 echo $handshake . "</br>";
 
 echo "settings are not active until reloaded on the device";
-
+echo "</br>";
+echo "</br>";
+echo getcwd();
 
 //---validate form data---
 if ($parity == "even"){
@@ -30,6 +32,8 @@ elseif ($parity == "none"){
 
 //---save data to config file---
 $config_f = fopen("data/wconfig.txt", "w+");
+echo $config_f . "</br>";
+
 
 $savestring = "[serial]" . PHP_EOL;
 fwrite($config_f, $savestring);
