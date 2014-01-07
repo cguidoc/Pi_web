@@ -31,7 +31,7 @@
 <table class="table table-condensed table-hover">	
 <?php
 	$file = @fopen("/var/www/Pi_web/upload/machine_log.txt", "r") ; 
-	echo "<tr> file opened </tr>" ;
+	echo "<tr> <td>file opened</td> </tr>" ;
 
 	while (!feof($file)){
 			
@@ -43,9 +43,9 @@
 			$status = 'success';}
 
 		else {
-			$status = '.active';}
+			$status = 'active';}
 
-		echo "<tr class=" . $status . ">" . $currentLine . "</tr>";
+		echo "<tr class=" . $status . "><td>" . $currentLine . "</td></tr>" . PHP_EOL;
 	} 
 	fclose($file) ;
 
