@@ -30,7 +30,7 @@
     </div>
 <table class="table table-condensed table-hover">	
 <?php
-	$file = @fopen("/var/www/Pi_web/upload/machine_log.txt", "r") ; 
+	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
 	echo "<tr> <td>file opened</td> </tr>" ;
 
 	while (!feof($file)){
