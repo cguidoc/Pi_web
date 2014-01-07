@@ -35,7 +35,7 @@
           <tr><td><input type="submit" name="formSubmit" value="delete files" /></td></tr>
         <?php
           foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
-            echo "<tr><td><input type='checkbox' name='filelist[]' value=" . $filename . "</td>";
+            echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
             echo "<td>";
             echo "$filename size " . filesize($filename);
             echo "</td></tr>" . PHP_EOL;
