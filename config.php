@@ -68,4 +68,6 @@ fwrite($config_f, $savestring);
 
 
 fclose($config_f);
+
+echo "<script>window.location = " . $_SERVER['DOCUMENT_ROOT'] . "index.html</script>";
 ?>
