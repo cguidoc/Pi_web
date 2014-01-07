@@ -30,13 +30,15 @@
     </div>
 
     <div class="container">
-
-<?php
-	
-foreach (glob("/var/www/Pi_web/upload/*") as $filename) {
-    echo "$filename size " . filesize($filename) . "\n";
-}
-?>
+      <table class="table table-condensed table-hover"> 
+      <?php
+        foreach (glob("/var/www/Pi_web/upload/*") as $filename) {
+          echo "<tr><td>";
+          echo "$filename size " . filesize($filename);
+          echo "</td></tr>" . PHP_EOL;
+        }
+      ?>
+      </table>
 	</div>
 </body>
 </html>
