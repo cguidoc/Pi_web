@@ -14,7 +14,7 @@ echo $parity . "</br>";
 echo $stopbits . "</br>";
 echo $handshake . "</br>";
 
-echo "settings are not active until reloaded on the device"
+echo "settings are not active until reloaded on the device";
 
 
 //---validate form data---

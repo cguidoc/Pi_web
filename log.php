@@ -15,9 +15,9 @@
 	</br>
 	
 <?php
-		echo "inside the php"
+		echo "inside the php";
 		$file = @fopen("/upload/machine_log.txt", "r") ; 
-		echo "file opened" 
+		echo "file opened" ;
 
 		while (!feof($file)){
 				
@@ -28,9 +28,9 @@
 			if (strpos($currentLine, 'NOTICE') !== false){
 				$status = 'success';}
 
-			echo "test line"
+			echo "test line";
 		} 
-		echo "end of file reached"  
+		echo "end of file reached";  
 		fclose($file) ;
 
 ?>
