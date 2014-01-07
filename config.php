@@ -31,7 +31,7 @@ elseif ($parity == "none"){
 
 
 //---save data to config file---
-$config_f = fopen("data/wconfig.txt", "w+");
+$config_f = fopen("/var/www/Pi_web/data/wconfig.txt", "w+");
 echo $config_f . "</br>";
 
 
