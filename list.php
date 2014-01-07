@@ -21,9 +21,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="config.html">Config</a></li>
+            <li><a href="config.html">Config</a></li>
             <li><a href="log.php">Log</a></li>
-            <li><a href="list.php">List Files</a></li>
+            <li class="active"><a href="list.php">List Files</a></li>
            </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -33,7 +33,7 @@
 
 <?php
 	
-foreach (glob("/var/www/Pi_web/upload/") as $filename) {
+foreach (glob("/var/www/Pi_web/upload/*") as $filename) {
     echo "$filename size " . filesize($filename) . "\n";
 }
 ?>
