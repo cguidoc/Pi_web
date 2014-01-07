@@ -32,7 +32,9 @@ elseif ($parity == "none"){
 
 //---save data to config file---
 $config_f = fopen("/var/www/Pi_web/data/wconfig.txt", "w+");
-echo $config_f . "</br>";
+
+$url_builder = "index.html?message=config_success";
+echo $url_builder . PHP_EOL;
 
 
 $savestring = "[serial]" . PHP_EOL;
@@ -41,18 +43,29 @@ fwrite($config_f, $savestring);
 $savestring = "port = /dev/ttyUSB0" . PHP_EOL;
 fwrite($config_f, $savestring);
 
+
+$url_builder .= "&baudrate=";
+$url_builder .= $baudrate;
 $savestring = "baudrate = " . $baudrate . PHP_EOL;
 fwrite($config_f, $savestring);
 
+$url_builder .= "&bytesize=";
+$url_builder .= $bytesize;
 $savestring = "bytesize = " . $bytesize . PHP_EOL;
 fwrite($config_f, $savestring);
 
+$url_builder .= "&parity=";
+$url_builder .= $parity;
 $savestring = "parity = " . $parity . PHP_EOL;
 fwrite($config_f, $savestring);
 
+$url_builder .= "&stopbits=";
+$url_builder .= $stopbits;
 $savestring = "stopbits = " . $stopbits . PHP_EOL;
 fwrite($config_f, $savestring);
 
+$url_builder .= "&handshake=";
+$url_builder .= $handshake;
 $savestring = "handshake = " . $handshake . PHP_EOL;
 fwrite($config_f, $savestring);
 
@@ -68,6 +81,7 @@ fwrite($config_f, $savestring);
 
 
 fclose($config_f);
+echo $url_builder . PHP_EOL;
 
-echo "<script>window.location = 'index.html'</script>";
+echo "<script>window.location = '" . $url_builder . "'</script>";
 ?>
