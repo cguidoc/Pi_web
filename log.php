@@ -16,7 +16,7 @@
 	
 <?php
 		echo "inside the php";
-		$file = @fopen("/upload/machine_log.txt", "r") ; 
+		$file = @fopen("/var/www/Pi_web/upload/machine_log.txt", "r") ; 
 		echo "file opened" ;
 
 		while (!feof($file)){
@@ -28,7 +28,7 @@
 			if (strpos($currentLine, 'NOTICE') !== false){
 				$status = 'success';}
 
-			echo "test line";
+			echo $currentLine . "</br>";
 		} 
 		echo "end of file reached";  
 		fclose($file) ;
