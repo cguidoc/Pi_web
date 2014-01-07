@@ -55,7 +55,6 @@
 
 </table>
 	
-back in the html
 </body>
 </html>
 

@@ -32,7 +32,7 @@
     <div class="container">
       <table class="table table-condensed table-hover"> 
       <?php
-        foreach (glob("/var/www/Pi_web/upload/*") as $filename) {
+        foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
           echo "<tr><td>";
           echo "$filename size " . filesize($filename);
           echo "</td></tr>" . PHP_EOL;
