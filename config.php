@@ -29,7 +29,7 @@ elseif ($parity == "none"){
 
 
 //---save data to config file---
-$config_f = fopen("/data/config.txt", "w+");
+$config_f = fopen("data/wconfig.txt", "w+");
 
 $savestring = "[serial]" . PHP_EOL;
 fwrite($config_f, $savestring);
