@@ -30,19 +30,24 @@
     </div>
 
     <div class="container">
-      <form action="manage-files.php" method="post">
-        <table class="table table-condensed table-hover"> 
-          <tr><td><input type="submit" name="formSubmit" value="delete files" /></td></tr>
-        <?php
-          foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
-            echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
-            echo "<td>";
-            echo "$filename size " . filesize($filename);
-            echo "</td></tr>" . PHP_EOL;
-          }
-        ?>
-        </table>
-      </form>
-	</div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Queued files (going to the machine)</div>
+        <div class="panel-body">
+          <form action="manage-files.php" method="post">
+            <table class="table table-condensed table-hover"> 
+              <tr><td><input type="submit" name="formSubmit" value="delete files" /></td></tr>
+                <?php
+                  foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
+                    echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
+                    echo "<td>";
+                    echo "$filename size " . filesize($filename);
+                    echo "</td></tr>" . PHP_EOL;
+                  }
+                ?>
+            </table>
+          </form>
+        </div>
+       </div>
+     </div>
 </body>
 </html>
