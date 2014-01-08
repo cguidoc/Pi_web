@@ -30,7 +30,7 @@
     </div>
 
     <div class="container">
-      <div class="panel panel-default">
+      <div class="panel panel-default col-md-6">
         <div class="panel-heading">Queued files (going to the machine)</div>
         <div class="panel-body">
           <form action="manage-files.php" method="post">
