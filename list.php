@@ -56,7 +56,7 @@
           <table class="table table-condensed table-hover"> 
             <tr><td><input type="submit" name="formSubmit" value="delete files" /></td></tr>
               <?php
-                foreach (glob("/var/www/Pi_web/data/*") as $filename) {
+                foreach (glob("/var/www/Pi_web/data/received/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
                   echo "<td>";
                   echo "$filename size " . filesize($filename);
