@@ -56,7 +56,7 @@
           <table class="table table-condensed table-hover"> 
             <tr><td><input type="submit" name="formSubmit" value="delete files" /></td></tr>
               <?php
-                foreach (glob($_SERVER['DOCUMENT_ROOT']."data/received/*") as $filename) {
+                foreach (glob($_SERVER['DOCUMENT_ROOT']."/data/received/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
                   echo "<td><a href='" . $filename ."'> download file</a></td>";
                   echo "<td>";
