@@ -58,6 +58,7 @@
               <?php
                 foreach (glob("/var/www/Pi_web/data/received/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
+                  echo "<td><a href='" . $filename ."'> download file</a></td>"
                   echo "<td>";
                   echo "$filename size " . filesize($filename);
                   echo "</td></tr>" . PHP_EOL;
