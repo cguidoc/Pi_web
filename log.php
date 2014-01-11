@@ -35,7 +35,7 @@
   $log = array();
 	while (!feof($file)){			
 		
-    $log = fgets($file);}
+    $log[] = fgets($file);}
 
 	fclose($file);
   $reverse_log = array_reverse($log);
