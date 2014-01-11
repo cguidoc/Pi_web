@@ -40,7 +40,7 @@
 	fclose($file);
   $reverse_log = array_reverse($log);
 
-  foreach ($log as $data){	
+  foreach ($reverse_log as $data){	
     if (strpos($data, 'ERROR') !== false){
 			$status = 'danger';}
 
