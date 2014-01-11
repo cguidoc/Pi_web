@@ -41,7 +41,8 @@
     <table class="table table-condensed table-hover">	
       <?php
       	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
-      	echo "<tr> <td>file opened</td> </tr>" ;
+      	echo "<tr><td><a href='delete_log.php' class='btn btn-default btn-lg'>" . PHP_EOL;
+        echo "<span class='glyphicon glyphicon-trash'></span> Delete Log </a></td> </tr>" . PHP_EOL;
         $log = array();
       	while (!feof($file)){			
       		
