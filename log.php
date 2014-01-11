@@ -32,23 +32,27 @@
 <?php
 	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
 	echo "<tr> <td>file opened</td> </tr>" ;
+  $log = array();
+	while (!feof($file)){			
+		
+    $log = fgets($file);}
 
-	while (!feof($file)){
-			
-		$currentLine = fgets($file);
-		if (strpos($currentLine, 'ERROR') !== false){
+	fclose($file);
+  $reverse_log = array_reverse($log);
+
+  foreach ($log as $data){	
+    if (strpos($data, 'ERROR') !== false){
 			$status = 'danger';}
 
-		elseif (strpos($currentLine, 'NOTICE') !== false){
+		elseif (strpos($data, 'NOTICE') !== false){
 			$status = 'success';}
 
 		else {
 			$status = 'active';}
 
-		echo "<tr class=" . $status . "><td>" . $currentLine . "</td></tr>" . PHP_EOL;
+		echo "<tr class=" . $status . "><td>" . $data . "</td></tr>" . PHP_EOL;
 	} 
-	fclose($file) ;
-
+	
 ?>
 
 
