@@ -31,7 +31,6 @@
 
   <div class="container">
     <?php
-      echo $GET['message'];
       if ($_GET['message']=="delete_success"){
         echo "<div class='alert alert-success'>";
         echo "<strong>SUCCESS! </strong>Log File Cleared";
@@ -39,9 +38,6 @@
       }
     ?>
 
-    
-      
-    </div>
     <table class="table table-condensed table-hover">	
       <?php
       	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
