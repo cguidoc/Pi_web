@@ -21,7 +21,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="config.html">Config</a></li>
             <li><a href="log.php">Log</a></li>
             <li class="active"><a href="list.php">List Files</a></li>
            </ul>
