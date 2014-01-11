@@ -43,6 +43,88 @@
             </form>
           </div>
         </div>
+        <div class="panel panel-default col-md-6">
+          <div class="panel-heading">RS232 Configuration Parameters</div>
+          <div class="panel-body">
+            <form id="config_update" action="config.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group">
+                <label for="machine" class="col-sm-4 control-label">Machine Name</label>
+                <div class="col-sm-6">
+                  <input type="text" name="machine" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="baudrate" class="col-sm-4 control-label">Serial Parameters - Baud Rate</label>
+                <div class="col-sm-6">
+                  <select name="baudrate" class="form-control">
+                    <option>300</option>
+                    <option>1200</option>
+                    <option>2400</option>
+                    <option>4800</option>
+                    <option>9600</option>
+                    <option>14400</option>
+                    <option>19200</option>
+                    <option>28800</option>
+                    <option>38400</option>
+                    <option>57600</option>
+                    <option>115200</option>
+                    <option>230400</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="bytesize" class="col-sm-4 control-label">Serial Parameters - Byte Size</label>
+                <div class="col-sm-6">
+                  <select name="bytesize" class="form-control">
+                    <option>7</option>
+                    <option>8</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="parity" class="col-sm-4 control-label">Serial Parameters - Parity</label>
+                <div class="col-sm-6">
+                  <select name="parity" class="form-control">
+                    <option>even</option>
+                    <option>odd</option>
+                    <option>none</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="stopbits" class="col-sm-4 control-label">Serial Parameters - Stop bits</label>
+                <div class="col-sm-6">
+                  <select name="stopbits" class="form-control">
+                    <option>1</option>
+                    <option>1.5</option>
+                    <option>2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="handshake" class="col-sm-4 control-label">Serial Parameters - Handshake</label>
+                <div class="col-sm-6">
+                  <select name="handshake" class="form-control">
+                    <option>XON/XOFF</option>
+                    <option>RTS/CDS</option>
+                    <option>DTR/DTS</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Save Settings</label>
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-default">Save</button>
+                </div>
+              </div>
+            </form> 
+          </div>
+        </div>
+
+
+
+
+
       </div>
     </div>
 
