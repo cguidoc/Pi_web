@@ -28,40 +28,43 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+
+<div class="container">    
     <div class="alert alert-success">
       <strong>SUCCESS!</strong>Log File Cleared
     </div>
-<table class="table table-condensed table-hover">	
-<?php
-	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
-	echo "<tr> <td>file opened</td> </tr>" ;
-  $log = array();
-	while (!feof($file)){			
-		
-    $log[] = fgets($file);}
+    <table class="table table-condensed table-hover">	
+    <?php
+    	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
+    	echo "<tr> <td>file opened</td> </tr>" ;
+      $log = array();
+    	while (!feof($file)){			
+    		
+        $log[] = fgets($file);}
 
-	fclose($file);
-  $reverse_log = array_reverse($log);
+    	fclose($file);
+      $reverse_log = array_reverse($log);
 
-  foreach ($reverse_log as $data){	
-    if (strpos($data, 'ERROR') !== false){
-			$status = 'danger';}
+      foreach ($reverse_log as $data){	
+        if (strpos($data, 'ERROR') !== false){
+    			$status = 'danger';}
 
-		elseif (strpos($data, 'NOTICE') !== false){
-			$status = 'success';}
+    		elseif (strpos($data, 'NOTICE') !== false){
+    			$status = 'success';}
 
-		else {
-			$status = 'active';}
+    		else {
+    			$status = 'active';}
 
-		echo "<tr class=" . $status . "><td>" . $data . "</td></tr>" . PHP_EOL;
-	} 
-	
-?>
+    		echo "<tr class=" . $status . "><td>" . $data . "</td></tr>" . PHP_EOL;
+    	} 
+    	
+    ?>
 
 
 
-</table>
-	
+    </table>
+  </div>
+    	
 </body>
 </html>
 
