@@ -41,7 +41,7 @@
                 foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
                   echo "<td>";
-                  echo "$filename size " . filesize($filename);
+                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename);
                   echo "</td></tr>" . PHP_EOL;
                 }
               ?>
@@ -60,7 +60,7 @@
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
                   echo "<td><a href='" . str_replace("/var/www/Pi_web/", "", $filename) ."'> download file</a></td>";
                   echo "<td>";
-                  echo $filename . " | size " . filesize($filename);
+                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename);
                   echo "</td></tr>" . PHP_EOL;
                 }
               ?>
