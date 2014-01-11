@@ -50,7 +50,7 @@
      </div>
     </div>
     <div class="panel panel-default col-md-6">
-      <div class="panel-heading">Received Files (Ccoming from the machine)</div>
+      <div class="panel-heading">Received Files (Coming from the machine)</div>
       <div class="panel-body">
         <form action="manage-files.php" method="post">
           <table class="table table-condensed table-hover"> 
@@ -58,7 +58,7 @@
               <?php
                 foreach (glob("/var/www/Pi_web/data/received/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
-                  echo "<td><a href='" . str_replace("/var/data/Pi_web", "", $filename) ."'> download file</a></td>";
+                  echo "<td><a href='" . str_replace("/var/www/Pi_web/", "", $filename) ."'> download file</a></td>";
                   echo "<td>";
                   echo $filename . " | size " . filesize($filename);
                   echo "</td></tr>" . PHP_EOL;
