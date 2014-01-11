@@ -28,6 +28,9 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <div class="alert alert-success">
+      <strong>SUCCESS!</strong>Log File Cleared
+    </div>
 <table class="table table-condensed table-hover">	
 <?php
 	$file = @fopen("/var/www/Pi_web/data/machine_log.txt", "r") ; 
