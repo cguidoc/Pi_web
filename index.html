@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="panel panel-default col-md-6">
-          <div class="panel-heading">RS232 Configuration Parameters</div>
+          <div class="panel-heading">Machine Configuration Parameters</div>
           <div class="panel-body">
             <form id="config_update" action="config.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
               <div class="form-group">
@@ -110,6 +110,19 @@
                   </select>
                 </div>
               </div>
+              <div class="form-group">
+                <label for="extension" class="col-sm-4 control-label">Machine Setting - Received file extension</label>
+                <div class="col-sm-6">
+                  <select name="extension" class="form-control">
+                    <option>mx3</option>
+                    <option>lx3</option>
+                    <option>pt4</option>
+                    <option>pt7</option>
+                    <option>ncf</option>
+                  </select>
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-4 control-label">Save Settings</label>
                 <div class="col-sm-6">

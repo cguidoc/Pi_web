@@ -6,6 +6,7 @@ $bytesize = $_POST['bytesize']; 	//rs232 byte size
 $parity = $_POST['parity']; 		//rs232 parity
 $stopbits = $_POST['stopbits']; 	//rs232 stopbits
 $handshake = $_POST['handshake']; 	//rs232 handshake
+$extension = $_POST['extension'];
 
 echo $m_name . "</br>";
 echo $baudrate . "</br>";
@@ -79,6 +80,10 @@ fwrite($config_f, $savestring);
 $savestring = "machine_name = " . $m_name . PHP_EOL;
 fwrite($config_f, $savestring);
 
+$url_builder .= "&extension=";
+$url_builder .= $extension;
+$savestring = "file_extension = " . $extension . PHP_EOL;
+fwrite($config_f, $savestring);
 
 fclose($config_f);
 echo $url_builder . PHP_EOL;
