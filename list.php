@@ -39,8 +39,8 @@
               <?php
                 foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
                   echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
-                  echo "<td>";
-                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename);
+                  echo "<td><a href='" . str_replace("/var/www/Pi_web/", "", $filename) . "'>";
+                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename) . "</a></td>";
                   echo "</td></tr>" . PHP_EOL;
                 }
               ?>
