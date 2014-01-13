@@ -29,6 +29,53 @@
 </div>
 
 <div class="container">
+  <div class="row col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            Queued Files
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <?php
+                foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
+                  echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
+                  echo "<td><a href='" . str_replace("/var/www/Pi_web/", "", $filename) . "'>";
+                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename) . "</a></td>";
+                  echo "</td></tr>" . PHP_EOL;
+                }
+          ?>
+          </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            Received Files
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+        <?php
+                foreach (glob("/var/www/Pi_web/data/received/*") as $filename) {
+                  echo "<tr><td><input type='checkbox' name='filelist[]' value='" . $filename . "'/></td>";
+                  echo "<td><a href='" . str_replace("/var/www/Pi_web/", "", $filename) ."'>";
+                  echo str_replace("/var/www/Pi_web/", "", $filename) . " | size " . filesize($filename) . "</a></td>";
+                  echo "</td></tr>" . PHP_EOL;
+                }
+        ?>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
   <div class="row">
     <div class="panel panel-default col-md-6">
       <div class="panel-heading">Queued files (going to the machine)</div>
