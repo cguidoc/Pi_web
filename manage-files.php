@@ -10,4 +10,5 @@
 	      unlink($flist[$i]);
 	    }
 	  }
+	echo "<script>window.location = 'list.php'</script>"
 ?>
