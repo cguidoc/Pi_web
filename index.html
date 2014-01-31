@@ -29,13 +29,13 @@
     </div>
 
     <div class="container">
-      <div class="row">
          <?php
           if ($_GET['message']=="success_upload"){
             echo "<div class='alert alert-success'>";
             echo "<strong>SUCCESS! </strong>File Uploaded";
             echo "</div>";
           }
+
           if ($_GET['message']=="fail_upload"){
             echo "<div class='alert alert-danger'>";
             echo "<strong>FAILURE! </strong>Error Uploading File";
@@ -45,7 +45,6 @@
 
         ?>
 
-      </div>  
       <div class="row>">
         <div class="panel panel-default col-md-6">
           <div class="panel-heading">Upload</div>
