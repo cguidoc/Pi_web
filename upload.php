@@ -2,7 +2,7 @@
 $allowedExts = array("txt", "ncf");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
-$delete_flag = $_POST['delete'];
+// $delete_flag = $_POST['delete'];
 $flist = [];
 
 if (($_FILES["file"]["type"] == "text/plain") && in_array($extension, $allowedExts)){
@@ -11,7 +11,7 @@ if (($_FILES["file"]["type"] == "text/plain") && in_array($extension, $allowedEx
     }
   
   else {
-    if $delete_flag {
+    if (isset($_POST['delete'])){
       // Create a list of files in the queued directory then delete them
       foreach (glob("/var/www/Pi_web/data/queued/*") as $filename) {
         array_push($flist, $filename);
