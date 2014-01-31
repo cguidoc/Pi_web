@@ -2,7 +2,7 @@
 $allowedExts = array("txt", "ncf");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
-$delete_flag = $_POST['$delete'];
+$delete_flag = $_POST['delete'];
 $flist = [];
 
 if (($_FILES["file"]["type"] == "text/plain") && in_array($extension, $allowedExts)){
