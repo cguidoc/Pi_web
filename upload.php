@@ -3,9 +3,9 @@ $allowedExts = array("txt", "ncf");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 // $delete_flag = $_POST['delete'];
-$flist = [];
+// $flist = [];
 
-if in_array($extension, $allowedExts){
+if (in_array($extension, $allowedExts)){
   if ($_FILES["file"]["error"] > 0) {
     echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
     }
