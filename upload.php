@@ -41,8 +41,8 @@ if (in_array($extension, $allowedExts)){
     else {
       $folder = "/var/www/Pi_web/data/queued/";
       // change the file extension so python can handle it properly
-      $newname = basename($_FILES["file"]["name"], ".ncf").".txt";
-      rename($_FILES["file"]["name"], $newname);
+      //$newname = basename($_FILES["file"]["name"], ".ncf").".txt";
+      //rename($_FILES["file"]["name"], $newname);
       //now upload the file
       move_uploaded_file($_FILES["file"]["tmp_name"], $folder.$_FILES["file"]["name"]);
       echo "Stored in: " . $folder;
