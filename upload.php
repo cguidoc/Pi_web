@@ -40,14 +40,15 @@ if (in_array($extension, $allowedExts)){
     // if file doesn't exist, save fhe file
     else {
       $folder = "/var/www/Pi_web/data/queued/";
-      // change the file extension so python can handle it properly
-      $newname = basename($_FILES["file"]["name"], ".NCF").".txt";
-      rename($_FILES["file"]["name"], $newname);
-
-      //now upload the file
+            //now upload the file
       move_uploaded_file($_FILES["file"]["tmp_name"], $folder.$_FILES["file"]["name"]);
       echo "Stored in: " . $folder;
       echo "<script>window.location = 'index.html?message=success_upload'</script>";
+
+      // change the file extension so python can handle it properly
+      $newname = basename($folder.$_FILES["file"]["name"], ".NCF").".txt";
+      rename($folder.$_FILES["file"]["name"], $newname);
+
     }
   }
 }
