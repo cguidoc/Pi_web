@@ -33,9 +33,9 @@ if (in_array($extension, $allowedExts)){
     //check to see if file already exists, and if it does, redirect with error
     if (file_exists("upload/" . $_FILES["file"]["name"])) {
       echo $_FILES["file"]["name"] . " already exists. "; 
-      echo "<script>window.location = 'index.html?message=fail_upload'</script>";
+      echo "<script>window.location = 'index.html?message=fail_upload_overwrite'</script>";
     }
-    
+
     // if file doesn't exist, save fhe file
     else {
       $folder = "/var/www/Pi_web/data/queued/";
@@ -51,6 +51,6 @@ if (in_array($extension, $allowedExts)){
 }
 else {
   echo "Invalid file";
-  echo "<script>window.location = 'index.html?message=fail_upload'</script>";
+  echo "<script>window.location = 'index.html?message=fail_upload_invalid_file'</script>";
 }
   ?>
