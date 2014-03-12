@@ -47,7 +47,7 @@ if (in_array($extension, $allowedExts)){
 
       // change the file extension so python can handle it properly
       $newname = basename($folder.$_FILES["file"]["name"], ".NCF").".txt";
-      rename($folder.$_FILES["file"]["name"], $newname);
+      rename($folder.$_FILES["file"]["name"], $folder.$newname);
 
     }
   }
