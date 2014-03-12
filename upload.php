@@ -8,6 +8,7 @@ $extension = end($temp);
 if (in_array($extension, $allowedExts)){
   if ($_FILES["file"]["error"] > 0) {
     echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    die("erros in files")
     }
   
   else {
