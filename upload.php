@@ -1,5 +1,5 @@
 <?php
-$allowedExts = array("txt", "ncf");
+$allowedExts = array("txt", "ncf", "NCF");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 // $delete_flag = $_POST['delete'];
